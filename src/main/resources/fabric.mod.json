@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "itemcompressor",
+	"version": "${version}",
+	"name": "ItemCompressor",
+	"description": "ItemCompressor is a client-side Fabric mod that eliminates drop-related lag by visually batching identical items in a 2-block radius into a single model with a dynamic stack count tag.",
+	"authors": [
+		"ProHacker888"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/i-c",
+		"sources": "https://github.com/adviksinghal/ItemCompressor"
+	},
+	"license": "MIT",
+	"icon": "assets/itemcompressor/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.ic.client.ItemCompressorClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "itemcompressor.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
